@@ -38,9 +38,6 @@ const server = http.createServer((req, res) => {
                 res.setHeader("Location", "/error");
                 res.end();
             }
-            // fs.writeFileSync("logininfo.txt", parsedBody);
-            // res.write("Received");
-            // res.end();
         });
     } else if (url === "/home") {
         fs.readFile("./source/home.html", "utf-8", (error, data) => {
@@ -61,5 +58,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(3030, () => {
-    console.log("hi greeting from listen");
+    console.log("hi greeting from 3030");
 });
